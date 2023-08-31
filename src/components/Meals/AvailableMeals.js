@@ -43,17 +43,17 @@ const AvailableMeals = () => {
 
   if (isLoading) {
     return (
-      <setion className={classes['meals-loading']}>
+      <section className={classes['meals-loading']}>
         <p>Loading ...</p>
-      </setion>
+      </section>
     );
   }
 
   if (httpError) {
     return (
-      <setion className={classes['meals-error']}>
+      <section className={classes['meals-error']}>
         <p>{httpError}</p>
-      </setion>
+      </section>
     );
   }
   const mealsList = meals.map((meal) => (
