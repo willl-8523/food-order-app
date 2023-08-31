@@ -5,6 +5,7 @@ import MealItem from './MealItem/MealItem';
 
 const AvailableMeals = () => {
   const [meals, setMeals] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchMeals = async () => {
@@ -28,7 +29,16 @@ const AvailableMeals = () => {
     };
 
     fetchMeals();
+    setIsLoading(false);
   }, []);
+
+  if (isLoading) {
+    return (
+      <setion className={classes['meals-loading']}>
+        <p>Loading ...</p>
+      </setion>
+    );
+  }
 
   const mealsList = meals.map((meal) => (
     <MealItem
