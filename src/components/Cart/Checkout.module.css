@@ -1,7 +1,17 @@
 .form {
     margin: 1rem 0;
     height: 19rem;
-    overflow: auto;
+    overflow-y: scroll;
+}
+
+.form::-webkit-scrollbar {
+  width: 7px; /* Largeur de la scrollbar */
+}
+
+.form::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+
+    background-color: #888;
 }
 
 .control {
@@ -36,6 +46,7 @@
     border: none;
     border-radius: 25px;
     padding: 0.5rem 2rem;
+    margin-right: 0.5rem;
 }
 
 .actions button:hover,
