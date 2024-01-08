@@ -3,7 +3,6 @@ import React, { Fragment } from 'react';
 import classes from './Header.module.css';
 import mealsImage from '../../assets/meals.jpg';
 import HeaderCartButton from './HeaderCartButton';
-import HeaderLoginButton from './HeaderLoginButton';
 
 const Header = (props) => {
   return (
@@ -12,7 +11,6 @@ const Header = (props) => {
         <h1>Meals Order</h1>
         <div className={classes.button}>
           <HeaderCartButton onClick={props.onShownCart} />
-          <HeaderLoginButton onClick={props.onShownCart}/>
         </div>
       </header>
       <div className={classes['main-image']}>
