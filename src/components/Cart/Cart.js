@@ -31,7 +31,7 @@ const Cart = (props) => {
     setIsSubmitting(true);
 
     await fetch(
-      'https://react-http-d6045-default-rtdb.europe-west1.firebasedatabase.app/orders.json',
+      `${process.env.API_URL_ORDERS}`,
       {
         method: 'POST',
         body: JSON.stringify({
